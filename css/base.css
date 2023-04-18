@@ -1,0 +1,267 @@
+/*--------------------------------
+レイアウト
+---------------------------------*/
+body {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: .8px;
+    color: #333;
+}
+
+a {
+    transition: opacity .3s;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border-style: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.for_PC {
+    display: block;
+}
+
+.for_SP {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .for_PC {
+        display: none;
+    }
+
+    .for_SP {
+        display: block;
+    }
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.inner {
+    padding: 20px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .inner {
+        padding: 15px 20px;
+    }
+
+}
+
+.mt_5{
+    margin-top: 5px;
+}
+
+.mt_10{
+    margin-top: 10px;
+}
+
+.mt_15{
+    margin-top: 15px;
+}
+
+.mt_20{
+    margin-top: 20px;
+}
+
+.mb_5{
+    margin-bottom: 5px;
+}
+
+.mb_10{
+    margin-bottom: 10px;
+}
+
+.mb_15{
+    margin-bottom: 15px;
+}
+
+.mb_20{
+    margin-bottom: 20px;
+}
+
+.lineRed {
+    border-bottom: 5px solid #FA7070;
+}
+
+.lineGreen {
+    border-bottom: 5px solid #A1C298;
+}
+
+.fontBold{
+    font-weight: bold;
+}
+
+.fontRed {
+    color: #FA7070;
+}
+
+.fontGlay {
+    color: rgb(144, 143, 143);
+}
+
+.site_listMemo{
+    margin-top: 15px;
+}
+
+.site_listMemo > li {
+    display: block;
+    position: relative;
+    padding-left: 1.5em;
+    margin-top: 5px;
+    text-align: left !important;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+.site_listMemo > li .site_listMark{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*--------------------------------
+ハンバーガーメニュー
+---------------------------------*/
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-btn span::after,
+    .menu-btn span:before,
+    .menu-btn span {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #333;
+        position: absolute;
+    }
+
+    .menu-btn {
+        position: relative;
+        top: 18px;
+        right: 5%;
+        display: flex;
+        height: 50px;
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: #e8e8e8;
+        position: absolute;
+    }
+
+    .menu-btn span:before {
+        bottom: 10px;
+    }
+
+    .menu-btn span::after {
+        top: 10px;
+    }
+
+    #menu-btn-check {
+        display: none;
+    }
+
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        background-color: #fff;
+    }
+
+    .menu-content ul {
+        padding: 70px 10px 0;
+    }
+
+    .menu-content ul li {
+        border-bottom: solid 1px #000;
+        list-style: none;
+    }
+
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: #333;
+        text-decoration: none;
+        padding: 9px 0px 10px 0;
+        position: relative;
+    }
+
+    .menu-content ul li a:before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #333;
+        border-right: solid 2px #333;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 80;
+        background-color: #e8e8e8;
+        transition: all 0.5s;
+    }
+
+    #menu-btn-check:checked~.menu-content {
+        left: 0;
+    }
+
+    .link,
+    .first_link {
+        display: none;
+    }
+}
