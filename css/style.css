@@ -536,6 +536,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .concept_text .concept_text_title .concept_text_title--ml {
+    margin-left: 15px;
+  }
+}
+
 
 .concept_text p {
   padding-bottom: 20px;
@@ -916,6 +922,7 @@
   background-color: #EFEAE4;
   line-height: 50px;
   font-size: 1.2rem;
+  font-weight: bold;
   text-align: center;
   color: #565656;
   display: block;
@@ -1283,6 +1290,7 @@
   letter-spacing: 0.3rem;
   color: #fff !important;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .event {
