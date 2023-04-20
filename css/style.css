@@ -1,11 +1,11 @@
 /* ヘッダー */
-.libralySite_header {
+.librarySite_header {
   background: #fff;
   height: 88px;
 }
 
 @media screen and (max-width: 768px) {
-  .libralySite_header {
+  .librarySite_header {
     height: 72.5px;
   }
 }
